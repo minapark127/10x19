@@ -1,0 +1,24 @@
+{
+  "name": "10x19",
+  "version": "1.0.0",
+  "description": "cloning 10x19 website",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch src/scss -o dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minapark127/10x19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minapark127/10x19/issues"
+  },
+  "homepage": "https://github.com/minapark127/10x19#readme"
+}
