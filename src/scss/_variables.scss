@@ -1,1 +1,12 @@
-$bgColor: #b07833;
+$mainColor: #b07833;
+
+%flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%revertColor {
+  background-color: $mainColor;
+  color: white;
+}
