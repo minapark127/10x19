@@ -7,59 +7,95 @@
     <title>10xx19</title>
   </head>
   <body>
-    <header class="header">
-      <section class="header__logo flex-center">
-        <a href="index.html"></a> ⑩ⓧⓍ⑲
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="header__logo flex-center">
+          <a href="index.html">⑩ⓧⓍ⑲</a>
+        </h1>
+        <span></span>
+        <div class="header__nav flex-center js-menu">menu</div>
+      </header>
+      <main>
+        <ul class="list-column js-slider__ul">
+          <a href="#">
+            <li>#1</li>
+          </a>
+          <a href="#">
+            <li>#2</li>
+          </a>
+          <a href="#">
+            <li>#3</li>
+          </a>
+          <a href="#">
+            <li>#4</li>
+          </a>
+          <a href="#">
+            <li>#5</li>
+          </a>
+        </ul>
+        <div class="img-column js-slider__placeholder">
+          <img src="src/images/1.jpg" alt="slider image" />
+        </div>
+        <ul class="list-column js-slider__ul">
+          <a href="#">
+            <li>#6</li>
+          </a>
+          <a href="#">
+            <li>#7</li>
+          </a>
+          <a href="#">
+            <li>#8</li>
+          </a>
+          <a href="#">
+            <li>#9</li>
+          </a>
+          <a href="#">
+            <li>#10</li>
+          </a>
+        </ul>
+      </main>
+
+      <footer>
+        <span></span>
+        <div class="flex-center"><p>sliding letters</p></div>
+        <span></span>
+      </footer>
+    </div>
+
+    <div class="overlay js-overlay hiding">
+      <header class="header">
+        <h1 class="header__logo flex-center">
+          <a href="index.html">⑩ⓧⓍ⑲</a>
+        </h1>
+        <span></span>
+        <div class="header__nav flex-center js-menu">close</div>
+      </header>
+
+      <section class="overlay__body">
+        <span></span>
+        <div class="overlay__body__text">
+          <h2>Created for practice purpose</h2>
+          <div>•</div>
+          <article>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            dolorem magnam vitae quaerat nihil in ab quos, fuga soluta
+            repudiandae, doloribus, quas ullam earum quibusdam eius. Nihil
+            voluptatibus repudiandae soluta!
+          </article>
+          <div>•</div>
+          <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+            similique odit atque quasi quod natus dolorum aspernatur facere
+            quisquam veniam!
+          </article>
+          <div>•</div>
+          <a href="mailto:mina.park127@gmail.com">CONTACT</a>
+        </div>
+        <span></span>
       </section>
-      <span></span>
-      <nav class="header__nav flex-center">menu</nav>
-    </header>
+    </div>
 
-    <main>
-      <ul class="list-column js-slider__ul">
-        <a href="#">
-          <li>#1</li>
-        </a>
-        <a href="#">
-          <li>#2</li>
-        </a>
-        <a href="#">
-          <li>#3</li>
-        </a>
-        <a href="#">
-          <li>#4</li>
-        </a>
-        <a href="#">
-          <li>#5</li>
-        </a>
-      </ul>
-      <div class="img-column js-slider__placeholder">
-        <img src="src/images/1.jpg" alt="slider image" />
-      </div>
-      <ul class="list-column js-slider__ul">
-        <a href="#">
-          <li>#6</li>
-        </a>
-        <a href="#">
-          <li>#7</li>
-        </a>
-        <a href="#">
-          <li>#8</li>
-        </a>
-        <a href="#">
-          <li>#9</li>
-        </a>
-        <a href="#">
-          <li>#10</li>
-        </a>
-      </ul>
-    </main>
-
-    <footer>
-      <span></span>
-      <div class="flex-center"><p>sliding letters</p></div>
-      <span></span>
-    </footer>
     <script src="src/js/slider.js"></script>
+    <script src="src/js/overlay.js"></script>
   </body>
 </html>
