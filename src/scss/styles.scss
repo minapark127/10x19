@@ -22,7 +22,6 @@ body {
   main .list-column > *,
   footer > * {
     background-color: white;
-    padding: 20px;
   }
   .header {
     &__nav:hover {
@@ -54,13 +53,33 @@ body {
       }
     }
   }
-}
 
+  footer {
+    .sliding {
+      overflow: hidden;
+      &__text {
+        white-space: nowrap;
+        animation: slideText 18s linear infinite;
+      }
+    }
+    @keyframes slideText {
+      0% {
+        transform: translateX(80%);
+      }
+      100% {
+        transform: translateX(-80%);
+      }
+    }
+  }
+}
+// add responsive
 .wrapper > *,
 .overlay > * {
   display: grid;
-  grid-template-columns: 1fr 1.8fr 1fr;
-  // minmax 550px?
+  grid-template-columns:
+    minmax(120px, 1fr)
+    minmax(500px, 1.8fr)
+    minmax(120px, 1fr);
   column-gap: 1px;
 }
 .header {
