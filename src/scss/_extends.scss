@@ -1,0 +1,10 @@
+%flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%revertColor {
+  background-color: $mainColor;
+  color: white;
+}

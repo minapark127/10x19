@@ -1,5 +1,7 @@
 @import "_reset";
 @import "_variables";
+@import "_extends";
+@import "_mixins";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
 
 body {
@@ -9,7 +11,40 @@ body {
     text-decoration: none;
     color: inherit;
   }
+  @include responsive(mobile) {
+    font-size: 1.5rem;
+  }
 }
+
+.wrapper > *,
+.overlay > * {
+  display: grid;
+  @include responsive(tablet) {
+    grid-template-columns:
+      minmax(120px, 1fr)
+      minmax(500px, 1.8fr)
+      minmax(120px, 1fr);
+  }
+  column-gap: 1px;
+}
+
+.header {
+  text-transform: uppercase;
+  &__logo {
+    font-size: 2.2rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  @include responsive(mobile) {
+    grid-template-columns: repeat(2, 1fr);
+    span {
+      display: none;
+    }
+  }
+}
+
 .wrapper {
   background-color: $mainColor;
   color: $mainColor;
@@ -29,7 +64,6 @@ body {
       @extend %revertColor;
     }
   }
-
   main {
     height: 100%;
     overflow: hidden;
@@ -38,6 +72,7 @@ body {
       grid-template-rows: repeat(5, 1fr);
       row-gap: 1px;
       a {
+        padding: 0.5rem;
         @extend %flexCenter;
         &:hover {
           @extend %revertColor;
@@ -53,7 +88,6 @@ body {
       }
     }
   }
-
   footer {
     .sliding {
       overflow: hidden;
@@ -71,24 +105,16 @@ body {
       }
     }
   }
-}
-// add responsive
-.wrapper > *,
-.overlay > * {
-  display: grid;
-  grid-template-columns:
-    minmax(120px, 1fr)
-    minmax(500px, 1.8fr)
-    minmax(120px, 1fr);
-  column-gap: 1px;
-}
-.header {
-  text-transform: uppercase;
-  &__logo {
-    font-size: 2.3rem;
-    a {
-      text-decoration: none;
-      color: inherit;
+  @include responsive(mobile) {
+    grid-template-rows: 3fr 5fr 3fr;
+    main {
+      grid-template-columns: repeat(2, 1fr);
+      .img-column {
+        display: none;
+      }
+    }
+    footer {
+      grid-template-columns: 50px 1fr 50px;
     }
   }
 }
@@ -105,9 +131,12 @@ body {
   @extend %revertColor;
 
   .header {
+    @include responsive(mobile) {
+      column-gap: 0px;
+      box-shadow: 0px 10px 25px -13px rgba(0, 0, 0, 0.35);
+    }
     position: relative;
     & > * {
-      padding: 20px;
       @extend %revertColor;
     }
     &__logo,
@@ -124,7 +153,7 @@ body {
     height: 100vh;
     overflow: scroll;
     &__text {
-      padding: 100px 20px;
+      padding: 150px 20px;
       line-height: 3rem;
       letter-spacing: 1px;
       text-align: center;
@@ -140,6 +169,12 @@ body {
           color: black;
         }
       }
+    }
+  }
+  @include responsive(mobile) {
+    grid-template-rows: 3fr 8fr;
+    &__body__text {
+      padding: 300px 20px;
     }
   }
 }
