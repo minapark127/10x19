@@ -2,7 +2,7 @@
 
 cloning 10x19 website
 
--SCSS used for this project
+- SCSS used for this project
 
 ```
 npm install node-sass
